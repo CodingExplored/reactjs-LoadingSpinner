@@ -4,11 +4,11 @@ import ModalPopup from './components/ModalPopup';
 import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false); //init a state variable to track the open/close state of modal
+  const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const toggleModal = () => {
-    setIsOpen(!isOpen); //set the current value to the opposite of current value
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -18,8 +18,7 @@ function App() {
       <div>
         <button onClick={toggleModal}>Open Modal</button>
         <ModalPopup isOpen={isOpen} onClose={toggleModal}>
-        <LoadingSpinner isLoading={isLoading} />
-          {!isLoading && <div>Data has been loaded!</div>}
+          <LoadingSpinner isLoading={isLoading} />
         </ModalPopup>
       </div>
     </div>

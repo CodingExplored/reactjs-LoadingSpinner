@@ -1,19 +1,38 @@
+/* CSS for the LoadingSpinner component */
+
+/* Styling for the container of the spinner */
 .spinner-container {
+    /* Display the container as a flex container */
     display: flex;
+    /* Horizontally center the content within the container */
     justify-content: center;
+    /* Vertically center the content within the container */
     align-items: center;
   }
 
+  /* Styling for the spinner itself */
   .spinner {
+    /* Create a circular border for the spinner */
     border: 5px solid #f3f3f3;
+    /* Create a top border with a different color to give a spinning effect */
     border-top: 5px solid chocolate;
+    /* Make the spinner a circle by giving it rounded edges */
     border-radius: 50%;
+    /* Set the width and height of the spinner */
     width: 50px;
     height: 50px;
+    /* Apply a spinning animation to the spinner */
     animation: spin 2s linear infinite;
   }
 
+  /* Define a keyframes animation called "spin" */
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    /* Define the starting state of the spinner */
+    0% {
+      transform: rotate(0deg); /* Rotate the spinner by 0 degrees */
+    }
+    /* Define the ending state of the spinner after one full rotation (360 degrees) */
+    100% {
+      transform: rotate(360deg); /* Rotate the spinner by 360 degrees, completing one full rotation */
+    }
   }
